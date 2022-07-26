@@ -9,11 +9,9 @@ function Footer () {
                 Visita mi <a href="https://github.com/xweret" rel="noopener noreferrer" >GitHub</a>
                 </li>
                 <li>
-                <p>Open Source ™</p>
+                
                 </li>
-            </ul>
-        
-            
+            </ul> 
         </footer>
         
     )

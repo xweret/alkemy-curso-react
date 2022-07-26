@@ -47,23 +47,23 @@ function Login() {
 
     }
     return (
-    <>
-        
-        <h1>Login</h1>
-        <form onSubmit={handleSubmit} className='login-container'>
-            <label>
-            <span> Correo Electronico:</span> <br/>
+    <div className='contenedor-login'>
+    
+        <h1 className='mt-2'>Formulario de Login</h1>
+        <form onSubmit={handleSubmit} className='login-container mt-3'>
+            <label className='me-2'>
+            <span > Correo Electronico:</span> <br/>
                 <input type="text" name="email" />
             </label>
             <label>
             <br/>
-                <span> Contraseña:</span> <br/>
+                <span className='' > Contraseña:</span> <br/>
                     <input type="password" name="password" />
                 </label>
                 <br/>
-                <button type="submit">Login</button>
+                <button className='btn btn-success mt-4' type="submit">Login</button>
         </form>
-    </>
+    </div>
     )
 }
 

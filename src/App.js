@@ -12,8 +12,9 @@ import './css/app.css'
 function App() {
   return (
     
-    
-      <div className='container bg-warining'>
+    <>
+      <div className='container-lg mt-3'>
+        {/* probar distitnos containers, el md o el vanilla  */}
         <Header/>
         <Routes>
           <Route exact path='/' element={<Login/>} />
@@ -21,6 +22,8 @@ function App() {
         </Routes>
         <Footer/>
       </div>
+
+    </>
 
   );
 }

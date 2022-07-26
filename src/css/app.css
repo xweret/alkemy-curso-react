@@ -1,5 +1,15 @@
-* {
-    background-color: wheat;
+body {
+    padding: 0; margin: 0;
+}
+html {
+    padding: 0; margin: 0;
+}
+
+footer ul {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 footer {
@@ -7,6 +17,22 @@ footer {
     bottom: 0;
     width: 100%;
     position: fixed;
+}
+.navone{
+    color: white !important;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-login {
+    background-color: gray;
+    text-align: center;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 31vh;
 }
 
 footer li {
@@ -17,20 +43,13 @@ footer li {
     padding: 1rem;
 }
 
+.links {
+    text-decoration: none;
+    color: black;
+}
+
 
 footer a {
     text-decoration: underline;
-    color: black;
-
-}
-
-button {
-    color: white;
-    background-color: black;
-    padding: 1rem;
-}
-
-.listado-container{
-    background-color: red;
     color: black;
 }
