@@ -1,10 +1,11 @@
 import axios from 'axios';
 import swAlert from '@sweetalert/with-react';
+import {useNavigate} from 'react-router-dom';
+
 
 function Login() {
 
-    
-    
+    let navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
@@ -40,7 +41,7 @@ function Login() {
                 swAlert (<h2>Login Valid, you are loged-in </h2>)
                 const tokenRecibido = res.data.token;
                 localStorage.setItem('token', tokenRecibido);
-                
+                navigate('/listado');
             })
 
     }
