@@ -46,9 +46,13 @@ function Login() {
             })
 
     }
+
+    let token = localStorage.getItem('token');
+
     return (
+        
     <div className='contenedor-login'>
-    
+            {token && navigate('/listado')}
         <h1 className='mt-2'>Formulario de Login</h1>
         <form onSubmit={handleSubmit} className='login-container mt-3'>
             <label className='me-2'>

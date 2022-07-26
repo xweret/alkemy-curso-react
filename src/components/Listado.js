@@ -1,17 +1,20 @@
 import {useNavigate, Link} from 'react-router-dom';
 import {useEffect} from 'react';
-
+import axios from 'axios';
 function Listado(){
-
     let navigate = useNavigate();
-    
     let token = null;
-    // useEffect(() => {
-    //     token = localStorage.getItem('token');
-    //     if ( {
-    //         navigate('/');
-    //     }
-    //     },[])
+
+    // llamamos a la api usando axios
+
+    useEffect(() => {
+        const endpoint = 'https://api.themoviedb.org/3/discover/movie?api_key=5d30ae53093a09ddbdf7efb36fc4aabc&language=en-US&sort_by=popularity.desc&include_adult=true&include_video=false&page=1&with_watch_monetization_types=flatrate';
+        axios.get(endpoint)
+            .then(response => {
+                console.log(response);
+            })
+    }, [])
+    
     return (
         <>
         {!token && navigate('/')}

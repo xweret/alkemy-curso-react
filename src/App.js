@@ -8,7 +8,6 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 // styles 
 import './css/app.css'
-
 function App() {
   return (
     
