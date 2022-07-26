@@ -3,6 +3,7 @@ import swAlert from '@sweetalert/with-react';
 import {useNavigate} from 'react-router-dom';
 
 
+
 function Login() {
 
     let navigate = useNavigate();
@@ -47,8 +48,9 @@ function Login() {
     }
     return (
     <>
+        
         <h1>Login</h1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='login-container'>
             <label>
             <span> Correo Electronico:</span> <br/>
                 <input type="text" name="email" />

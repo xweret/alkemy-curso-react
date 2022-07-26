@@ -12,7 +12,9 @@ function Listado(){
         }
         },[])
     return (
+        <div className='listado-container'>
         <h2>Listado</h2>
+        </div>
     )
 }
 

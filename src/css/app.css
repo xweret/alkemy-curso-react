@@ -1,0 +1,36 @@
+* {
+    background-color: wheat;
+}
+
+footer {
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+}
+
+footer li {
+    text-decoration: none;
+    list-style: none;
+    display: inline;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+
+footer a {
+    text-decoration: underline;
+    color: black;
+
+}
+
+button {
+    color: white;
+    background-color: black;
+    padding: 1rem;
+}
+
+.listado-container{
+    background-color: red;
+    color: black;
+}
