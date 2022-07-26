@@ -5,14 +5,16 @@ function Listado(){
 
     let navigate = useNavigate();
     
-
-    useEffect(() => {
-        const token = localStorage.getItem('token');
-        if (token === null) {
-            navigate('/');
-        }
-        },[])
+    let token = null;
+    // useEffect(() => {
+    //     token = localStorage.getItem('token');
+    //     if ( {
+    //         navigate('/');
+    //     }
+    //     },[])
     return (
+        <>
+        {!token && navigate('/')}
 <div className='row'>
         <div className='col-3'>
             <div className="card">
@@ -26,7 +28,9 @@ function Listado(){
     </div>
     
 </div>
+        </>
     )
 }
+
 
 export default Listado
