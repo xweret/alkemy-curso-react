@@ -1,9 +1,13 @@
 import {useNavigate, Link} from 'react-router-dom';
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import axios from 'axios';
 function Listado(){
     let navigate = useNavigate();
     let token = null;
+
+    // Creo un setter y lo uso en el useState donde llamamos a la data de la api
+
+    const [ moviesList, setMoviesList] = useState ([]);
 
     // llamamos a la api usando axios
 
@@ -11,9 +15,12 @@ function Listado(){
         const endpoint = 'https://api.themoviedb.org/3/discover/movie?api_key=5d30ae53093a09ddbdf7efb36fc4aabc&language=en-US&sort_by=popularity.desc&include_adult=true&include_video=false&page=1&with_watch_monetization_types=flatrate';
         axios.get(endpoint)
             .then(response => {
-                console.log(response);
+                const apiData = response.data
+                setMoviesList(apiData.results);
             })
-    }, [])
+    }, [setMoviesList])
+
+    console.log(moviesList)
     
     return (
         <>
