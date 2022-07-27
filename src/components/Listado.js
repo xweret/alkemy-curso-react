@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react';
 import axios from 'axios';
 function Listado(){
     let navigate = useNavigate();
-    let token = null;
+    let token = localStorage.getItem('token')
 
     // Creo un setter y lo uso en el useState donde llamamos a la data de la api
 
@@ -25,20 +25,30 @@ function Listado(){
     return (
         <>
         {!token && navigate('/')}
-<div className='row'>
-        <div className='col-3'>
-            <div className="card">
-                <img className="card-img-top" src="..." alt="..."/>
-            <div className="card-body">
-                <h5 className="card-title">Movie Tittle</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <Link to="/" className="btn btn-primary">View Detail</Link>
-            </div>
+        <div className='row'>
+            {
+                moviesList.map((oneMovie, idx) => {
+                    return (
+
+                    <div className='col-3' key={idx}>
+                <div className="card my-4">
+                    <img className="card-img-top" src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`} alt="..."/>
+                <div className="card-body">
+                    <h5 className="card-title">{oneMovie.title.substring(0, 60)+'...'}</h5>
+                    <p className="card-text">{oneMovie.overview.substring(0, 150)+'...'}</p>
+                    <Link to="/" className="btn btn-primary">View Detail</Link>
+                </div>
         </div>
     </div>
+
+            )
+        })
+    }
+
+        
     
-</div>
-        </>
+        </div>
+    </>
     )
 }
 
