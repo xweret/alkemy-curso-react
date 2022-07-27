@@ -1,10 +1,10 @@
-import {Redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 function Detalle (){
-    // let navigate = useNavigate();
-    let token = localStorage.getItem("token");
+    let navigate = useNavigate();
+    let token = sessionStorage.getItem('token');
     return (
         <>
-        { !token && <Redirect to="/" />}
+        {!token && navigate("/")}
         <h2>Detalles de la pelicula</h2>
         </>
     )

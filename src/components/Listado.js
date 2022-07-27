@@ -4,7 +4,7 @@ import swAlert from "@sweetalert/with-react";
 import axios from "axios";
 function Listado() {
   let navigate = useNavigate();
-  let token = localStorage.getItem("token");
+  let token = sessionStorage.getItem("token");
 
   // Creo un setter y lo uso en el useState donde llamamos a la data de la api
   const [moviesList, setMoviesList] = useState([]);
