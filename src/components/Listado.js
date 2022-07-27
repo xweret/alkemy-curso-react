@@ -24,6 +24,8 @@ function Listado() {
       });
   }, [setMoviesList]);
 
+  console.log (moviesList);
+
   return (
     <>
       {!token && navigate("/")}
@@ -44,7 +46,7 @@ function Listado() {
                   <p className="card-text">
                     {oneMovie.overview.substring(0, 150) + "..."}
                   </p>
-                  <Link to="/" className="btn btn-danger">
+                  <Link to={`/Detalle?movieID=${oneMovie.id}`} className="btn btn-danger">
                     View Detail
                   </Link>
                 </div>
