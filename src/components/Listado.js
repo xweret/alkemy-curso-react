@@ -34,9 +34,7 @@ function Listado() {
           return (
             <div className="col-3" key={idx}>
               <div className="card my-4">
-                <img
-                  className="card-img-top"
-                  src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`}
+                <img src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`} className="card-img-top"
                   alt="..."
                 />
                 <div className="card-body">

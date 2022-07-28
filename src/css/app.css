@@ -1,8 +1,10 @@
 body {
     padding: 0; margin: 0;
+    background-color: red;
 }
 html {
     padding: 0; margin: 0;
+    background-color: #dc3545;
 }
 
 footer ul {
@@ -28,7 +30,7 @@ html {
 }
 
 .contenedor-login {
-    background-color: gray;
+    background-color: white;
     text-align: center;
     align-items: center;
     margin-top: 1rem;
@@ -52,4 +54,10 @@ footer li {
 footer a {
     text-decoration: underline;
     color: black;
+}
+
+.buscador {
+    position: absolute;
+    left: 50%;
+    margin-bottom: 0.9rem;
 }

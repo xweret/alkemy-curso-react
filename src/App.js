@@ -7,19 +7,21 @@ import Listado from './components/Listado';
 import Detalle from './components/Detalle'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Resultados from './components/Resultados'
 // styles 
 import './css/app.css'
 function App() {
   return (
     
     <>
-      <div className='container-lg mt-3'>
+      <div className='container-fluid mt-3'>
         {/* probar distitnos containers, el md o el vanilla  */}
         <Header/>
         <Routes>
           <Route exact path='/' element={<Login/>} />
           <Route path='/listado' element={<Listado/>} />
           <Route path='/detalle' element={<Detalle/>} />
+          <Route path='/resultados' element= {<Resultados/>}/>
         </Routes>
         <Footer/>
       </div>

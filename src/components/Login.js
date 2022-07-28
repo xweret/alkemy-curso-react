@@ -53,7 +53,7 @@ function Login() {
         
     <div className='contenedor-login'>
             {token && navigate('/listado')}
-        <h1 className='mt-2'>Formulario de Login</h1>
+        <h1 className='mt-2'>Log-in</h1>
         <form onSubmit={handleSubmit} className='login-container mt-3'>
             <label className='me-2'>
             <span > Correo Electronico:</span> <br/>
