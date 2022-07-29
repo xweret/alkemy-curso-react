@@ -10,12 +10,13 @@ function Resultados (){
     const [moviesResults, setMoviesResults] = useState([]);
 
     useEffect(() => {
-        const endPoint = `https://api.themoviedb.org/3/search/company?api_key=5d30ae53093a09ddbdf7efb36fc4aabc&language&page=1&query=${keyword}`
+        const endPoint = `https://api.themoviedb.org/3/search/movie?api_key=5d30ae53093a09ddbdf7efb36fc4aabc&language=en=EN&page=1&query=${keyword}`;
         axios.get(endPoint).then (response => {
             const moviesArray = response.data.results;
-            setMoviesResults(moviesArray)
+            setMoviesResults(moviesArray);
         })
-        .catch(error =>  console.log(error))
+        .catch(error =>  console.log(error));
+        
     });
 
 return (
@@ -24,18 +25,21 @@ return (
         <h2> Buscaste: <em>{keyword}</em> </h2>
     <div className="row">
         {
-        moviesResults.map((oneMovie,idx) => {
+        moviesResults.map((oneMovie, idx) => {
             return (
                     <div className="col-4" key={idx}>
                     <div className="card my-4">
-                        <img src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`} className="card-img-top"
-                        alt="..."
-                        />
+                    <img src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`} className="card-img-top"
+                    alt="..."
+                    />
 
                         <div className="card-body">
-                            <h2> no flaco no ando </h2>
-                            <h5 className="card-title">lorem lo rem lorem</h5> 
-                            {/* <p className="card-text">{oneMovie.overview}... </p> */}
+                        <h5 className="card-title">
+                    {oneMovie.title.substring(0, 60) + "..."}
+                  </h5>
+                  <p className="card-text">
+                    {oneMovie.overview.substring(0, 150) + "..."}
+                  </p>
                             {/* <Link to={`/Detalle?movieID=${oneMovie.id}`} className="btn btn-danger">
                                 View Detail
                             </Link>  */}

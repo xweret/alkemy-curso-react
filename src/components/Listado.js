@@ -23,9 +23,6 @@ function Listado() {
         swAlert(<h2>Algo salio mal...xd</h2>);
       });
   }, [setMoviesList]);
-
-  console.log (moviesList);
-
   return (
     <>
       {!token && navigate("/")}
