@@ -18,27 +18,30 @@ function Resultados (){
         .catch(error =>  console.log(error))
     });
 
-
 return (
     <>
-        <h2> buscaste <em>{keyword}</em> </h2>
+        
+        <h2> Buscaste: <em>{keyword}</em> </h2>
     <div className="row">
-    {
+        {
         moviesResults.map((oneMovie,idx) => {
             return (
                     <div className="col-4" key={idx}>
                     <div className="card my-4">
                         <img src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`} className="card-img-top"
-                        alt="..."/>
+                        alt="..."
+                        />
+
                         <div className="card-body">
-                            <h5 className="card-title">{oneMovie.title}...</h5> 
-                            <p className="card-text">{oneMovie.overview}... </p>
+                            <h2> no flaco no ando </h2>
+                            <h5 className="card-title">lorem lo rem lorem</h5> 
+                            {/* <p className="card-text">{oneMovie.overview}... </p> */}
                             {/* <Link to={`/Detalle?movieID=${oneMovie.id}`} className="btn btn-danger">
                                 View Detail
                             </Link>  */}
                         </div>
                     </div>
-                    </div>
+                </div>
                 )
             })
         }
