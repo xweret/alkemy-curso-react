@@ -24,21 +24,18 @@ return (
         <h2> buscaste <em>{keyword}</em> </h2>
     <div className="row">
     {
-        moviesResults.map((oneMovie, idx) => {
+        moviesResults.map((oneMovie,idx) => {
             return (
-                    <div className="col-3" key={idx}>
+                    <div className="col-4" key={idx}>
                     <div className="card my-4">
                         <img src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`} className="card-img-top"
-                        alt="..."
-                        />
+                        alt="..."/>
                         <div className="card-body">
-                        {/* <h5 className="card-title">{oneMovie.title.substring(0, 60) + "..."}</h5> */}
-                        <p className="card-text">
-                            {/* {oneMovie.overview.substring(0, 150) + "..."} */}
-                        </p>
-                        {/* <Link to={`/Detalle?movieID=${oneMovie.id}`} className="btn btn-danger">
-                            View Detail
-                        </Link> */}
+                            <h5 className="card-title">{oneMovie.title}...</h5> 
+                            <p className="card-text">{oneMovie.overview}... </p>
+                            {/* <Link to={`/Detalle?movieID=${oneMovie.id}`} className="btn btn-danger">
+                                View Detail
+                            </Link>  */}
                         </div>
                     </div>
                     </div>
