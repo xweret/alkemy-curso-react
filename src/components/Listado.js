@@ -6,6 +6,8 @@ function Listado() {
   let navigate = useNavigate();
   let token = sessionStorage.getItem("token");
 
+
+
   // Creo un setter y lo uso en el useState donde llamamos a la data de la api
   const [moviesList, setMoviesList] = useState([]);
 
@@ -34,6 +36,7 @@ function Listado() {
                 <img src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`} className="card-img-top"
                   alt="..."
                 />
+                <button className="favourite-btn">🖤</button>
                 <div className="card-body">
                   <h5 className="card-title">
                     {oneMovie.title.substring(0, 60) + "..."}

@@ -11,6 +11,9 @@ import Resultados from './components/Resultados'
 // styles 
 import './css/app.css'
 function App() {
+  const addOrRemoveFav= () => {
+    console.log('ok anda');
+  }
   return (
     
     <>
