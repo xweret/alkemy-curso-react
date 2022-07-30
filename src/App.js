@@ -21,6 +21,7 @@ function App() {
         {/* probar distitnos containers, el md o el vanilla  */}
         <Header/>
         <Routes>
+          {/* aca va la prop en el elemento favorito  */}
           <Route exact path='/' element={<Login/>} />
           <Route path='/listado' element={<Listado/>} />
           <Route path='/detalle' element={<Detalle/>} />
