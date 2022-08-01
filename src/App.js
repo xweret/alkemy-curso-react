@@ -17,6 +17,7 @@ function App() {
   return (
     
     <>
+  
       <div className='container-fluid mt-3'>
         {/* probar distitnos containers, el md o el vanilla  */}
         <Header/>
@@ -24,7 +25,7 @@ function App() {
           
           {/* aca va la prop en el elemento favorito  */}
           <Route exact path='/' element={<Login/>} />
-          <Route path='/listado' render={(props) => <Listado addOrRemoveFav = {addOrRemoveFav} {...props}/>} />
+          <Route path='/listado' element={<Listado/>} />
           <Route path='/detalle' element={<Detalle/>} />
           <Route path='/resultados' element= {<Resultados/>}/>
         </Routes>

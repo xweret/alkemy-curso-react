@@ -2,9 +2,12 @@ import { useNavigate, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import swAlert from "@sweetalert/with-react";
 import axios from "axios";
-function Listado() {
+
+function Listado(props) {
+
   let navigate = useNavigate();
   let token = sessionStorage.getItem("token");
+  console.log(props);
 
 
 
